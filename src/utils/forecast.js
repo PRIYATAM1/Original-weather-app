@@ -7,7 +7,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Unable to Find Location weather, Please Enter Correct Location', undefined)
         } else {
-            callback(undefined, 'Weather Observation Time...'+body.current.observation_time + '. It is currently ' + body.current.temperature + ' degress out. There is a ' + body.current.precip + '% chance of rain.'
+            callback(undefined, 'Weather Observation Time...'+body.current.observation_time + '. It is currently ' + body.current.temperature + ' degress out. There is a ' + body.current.precip + '% chance of rain. The humidity is '+ body.current.humidity +'. '
 )
         }
     })
